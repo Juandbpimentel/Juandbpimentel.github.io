@@ -1,0 +1,237 @@
+body{
+    margin: 0;
+    background-color: rgb(172, 194, 213);
+}
+
+/*
+os containers da página são para que o conteúdo fique dividido em rows e quando a tela está em 600px o conteúdo fique em colunas
+utilizando o flex direction
+*/
+/*Containers de página*/
+.pageContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px){
+    .pageContainer{
+        flex-direction: column;
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height:1200px;
+    background-color: rgb(136, 154, 169);
+}
+
+@media screen and (max-width: 600px){
+    .content{
+        width: 100vw;
+    }
+}
+
+
+
+/*Estilos barara navegação*/
+/*
+A barra de navegação tem uma ul que faz com que ela seja uma lista com os links, e tem o botão sessões que quando está ativa a sua ul
+ele ativa o dropdown, que é também uma ul com mais links para as sessões da página
+*/
+.barraDeNavegacao{
+    display: flex;
+    flex-direction: row;
+    padding:0;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(76, 83, 88);
+}
+
+.barraDeNavegacao > ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.barraDeNavegacao ul li{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px 0 10px;
+
+}
+
+.barraDeNavegacao ul li>a{
+    height: 30px;
+
+}
+
+.dropdown{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(76, 83, 88);
+    position: absolute;
+    width: 110px;
+    height: 30%;
+    top: 8.8vh;
+    right:17.35vh;
+    padding: 0;
+}
+
+.botaoDropdown:active>.dropdown, .dropdown:hover{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown li a{
+    height: 30px;
+}
+
+ul{
+    list-style: none;
+}
+
+.botao{
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(140, 188, 226);
+    padding:0px;
+}
+
+.botao:hover{
+    background-color: rgb(90, 125, 160);
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.botao:active{
+    background-color: rgb(140, 188, 226);
+}
+
+nav ul li a{
+    font-size: 1.4rem;
+    font-weight: bold;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+
+li a{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+li a:hover{
+    background-color: rgba(175, 175, 175, 0.359);
+}
+
+/* Estilos menu lateral responsivo*/
+/*
+menu responsivo criado com uls e lis, estou utilizando o media query para fazer com que ele fique na horizontal com 600px
+
+*/
+.menuLateralResponsivo{
+    display: flex;
+    width: 20vw;
+    height:1200px;
+    background-color: rgb(105, 116, 124);
+
+}
+@media screen and (max-width: 600px){
+    .menuLateralResponsivo{
+        width: 100vw;
+        height: 20vh;
+    }
+}
+
+.menuLateralResponsivo ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+@media screen and (max-width : 600px){
+    .menuLateralResponsivo ul{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+.menuLateralResponsivo ul > li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+}
+
+
+.botaoLateral{
+    text-decoration: none;
+    color: rgb(140, 188, 226);
+}
+
+.botaoLateral:hover{
+    background-color: rgba(45, 61, 74, 0.27);
+}
+
+/* Estilos de Sessões e filhos*/
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.loader {
+    /*O loader é um componente vazio com borda, ele tem uma borda redonda e a borda do fundo transparente
+    o que faz com que ele tenha um buraco vazio, e a linha animation roda o elemento dirante um segundo e a tag infinite
+    cria o looping do elemento
+    */
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
+.linkContato{
+    color: rgb(3, 39, 55);
+}
+
+.linkContato:hover{
+    color: rgb(67, 3, 82);
+}
