@@ -217,16 +217,18 @@ section{
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    }
-
-    @keyframes rotation {
+}
+/*
+o keyframe define o conceito da rotação em 0% sendo 0 graus e 100% 360 graus, e o loader utilizar ele pra ir de 0% a 100% 
+*/
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
     }
-    } 
+} 
 
 .linkContato{
     color: rgb(3, 39, 55);
