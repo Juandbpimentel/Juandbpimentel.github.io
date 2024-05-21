@@ -1,0 +1,38 @@
+body {
+    background-color: #191225;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header>nav {
+    background-color: #120c1d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+header>nav>ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 3;
+    background-color: aliceblue;
+}
+
+header>nav>ul>li {
+    margin: 0 1rem;
+}
+
+header>nav>span {
+    flex: 1;
+    background-color: rgb(21, 89, 148);
+}
+
+header {
+    background-color: aliceblue;
+}
