@@ -8,31 +8,49 @@ body {
 
 header>nav {
     background-color: #120c1d;
-    color: white;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
+    padding: 1.25rem;
 }
 
 header>nav>ul {
     display: flex;
+    color: white;
     justify-content: space-between;
     list-style: none;
-    margin: 0;
+    margin: 0 1rem 0 4rem;
     padding: 0;
     flex: 3;
-    background-color: aliceblue;
+    max-width: 50%;
+
 }
 
 header>nav>ul>li {
     margin: 0 1rem;
+
 }
 
-header>nav>span {
+header>nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+header>nav>a {
     flex: 1;
-    background-color: rgb(21, 89, 148);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    align-self: center;
+    text-decoration: none;
 }
 
-header {
-    background-color: aliceblue;
+body>main {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
 }
